@@ -32,7 +32,6 @@ export default function Home() {
   useEffect(() => {
     connectWallet()
   }, [])
-  console.log(state)
   return (
     <>
     <button onClick={connectWallet}>Connect Wallet</button>
