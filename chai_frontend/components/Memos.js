@@ -15,20 +15,16 @@ const Memos = ({ state }) => {
   console.log(memos);
   return (
     <div>
-      <p>Messages</p>
       {memos.map((memo) => {
         return (
-          <table key={memo.timestamp}>
-            <tbody>
-              <tr>
-                {memo.name}
-                <td>{memo.name}</td>
-                <td>{memo.message}</td>
-                <td>{String(memo.timestamp)}</td>
-                <td>{memo.bhagwan}</td>
-              </tr>
-            </tbody>
-          </table>
+
+          <div className="flex flex-row justify-around border content-center">
+            <div className="">{memo.name}</div>
+            <div>{memo.message}</div>
+            <div>{new Date(memo.timestamp *1000).toLocaleString()}</div>
+            <div>{memo.bhagwan}</div>
+          </div>
+
         );
       })}
     </div>

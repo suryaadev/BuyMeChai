@@ -14,13 +14,29 @@ const Buy = ({ state }) => {
     window.alert("tx sucessful");
   };
   return (
-    <form onSubmit={buyChai}>
-      <label>Name</label>
-      <input type="text" id="name" placeholder="Enter name" />
-      <label>Message</label>
-      <input type="text" id="message" placeholder="Enter Message" />
-      <button type="submit">BUY</button>
-    </form>
+    <div className="border-2 rounded-lg p-2">
+      <form onSubmit={buyChai}>
+        <label className="text-2xl ">Name : </label>
+        <input
+          type="text"
+          id="name"
+          placeholder="Enter name"
+          className="border ml-2 p-1 rounded-xl mb-3"
+        />
+        <br />
+        <label className="text-2xl">Message : </label>
+        <input
+          type="text"
+          id="message"
+          placeholder="Enter Message"
+          className="border ml-2 p-1 rounded-xl mb-3"
+        />
+        <br />
+        <button type="submit" className="border-2 p-2 rounded-xl bg-[#bf742d] text-white w-full" >
+          BUY
+        </button>
+      </form>
+    </div>
   );
 };
 
